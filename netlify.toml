@@ -12,6 +12,7 @@
   from = "/*"
   to = "https://faculty-workload-api-3utl.onrender.com/api/:splat"
   status = 200
+  force = true
 
 [[headers]]
   for = "/*"
