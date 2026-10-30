@@ -1,3 +1,4 @@
+import bcrypt from "bcryptjs";
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
