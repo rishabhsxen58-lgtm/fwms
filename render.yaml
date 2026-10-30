@@ -4,8 +4,8 @@ services:
     name: faculty-workload-api
     runtime: node
     plan: free
-    buildCommand: "npm ci && npm run build"
-    startCommand: "npm run start --workspace backend"
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start --workspace backend
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
@@ -14,3 +14,5 @@ services:
         sync: false
       - key: DATABASE_FILE
         value: /tmp/workload.sqlite
+      - key: SEED_DEMO
+        value: "true"
