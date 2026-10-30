@@ -10,7 +10,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "https://faculty-workload-api-3utl.onrender.com/api/:splat"
   status = 200
 
 [[headers]]
