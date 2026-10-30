@@ -1,0 +1,3 @@
+name,email,department,designation,minHours,maxHours,expertise
+Ada Rivera,ada.rivera@example.edu,Computer Science,Lecturer,8,16,Software Engineering
+Omar Reed,omar.reed@example.edu,Computer Science,Senior Lecturer,8,16,Networks|Data Science

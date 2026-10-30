@@ -1,0 +1,22 @@
+# Durable option: choose a paid Render Starter web service and attach a disk.
+# This is not a free-tier configuration. Keep the disk mount path and DATABASE_FILE aligned.
+services:
+  - type: web
+    name: faculty-workload-api
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start --workspace backend
+    healthCheckPath: /api/health
+    disk:
+      name: faculty-workload-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_ORIGIN
+        sync: false      - key: DATABASE_FILE
+        value: /var/data/workload.sqlite
+      - key: SEED_DEMO
+        value: "true"
