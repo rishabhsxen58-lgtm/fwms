@@ -2,7 +2,7 @@ import { db } from "./db.js";
 
 // PUBLIC DEMO MODE ONLY: every visitor receives the seeded demo administrator identity.
 // Never enable this mode for real institutional or personal data.
-export function authenticate(_req, res, next) {
+export function authenticate(req, res, next) {
   const user = db.prepare(`SELECT u.id, u.institution_id, u.department_id, u.name, u.email, u.role, u.active
     FROM users u
     JOIN institutions i ON i.id = u.institution_id
