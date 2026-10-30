@@ -1,12 +1,13 @@
+
 services:
   - type: web
     name: faculty-workload-api
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run build
-    startCommand: npm run start --workspace backend
+    buildCommand: "npm ci && npm run build"
+    startCommand: "npm run start --workspace backend"
     healthCheckPath: /api/health
-       envVars:
+    envVars:
       - key: NODE_ENV
         value: production
       - key: CLIENT_ORIGIN
